@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="MIRTUSZ" EntityNamespace="MIRTUSZContext" ContextNamespace="MIRTUSZContext" Class="MIRTUSZDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="9d260325-ff8e-463b-9dbb-c401bf7a94bc" Provider="Devart.Data.Oracle.Linq.Provider.OracleDataProvider, Devart.Data.Oracle.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=mirtusz;Password=mirtusz;Server=FVRT_DEV;Persist Security Info=True" Provider="Devart.Data.Oracle" />
+  <Table Name="MIRTUSZ.ELEMI_MUNKAK" Member="ELEMIMUNKAKs">
+    <Type Name="ELEMIMUNKAK" ed:Guid="b12d51dc-2654-476b-aed0-a5b79b5ec195">
+      <Documentation>
+        <Summary>Elemi munkak</Summary>
+      </Documentation>
+      <Column Name="AZONOSITO" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Precision="10" ed:ValidateRequired="true" ed:Guid="ed055302-f7fb-4d6e-986b-6969d1666f0f">
+        <Documentation>
+          <Summary>Egyedi azonosito</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="TERVEZETT_KEZDET_IDO" Member="TERVEZETTKEZDETIDO" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="df924569-50d7-4528-982e-292ee977c3fa">
+        <Documentation>
+          <Summary>Tervezett kezdet idopont</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="TERVEZETT_VEG_IDO" Member="TERVEZETTVEGIDO" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="36d72eb8-f852-4d9e-a074-b8d1fa1618ce">
+        <Documentation>
+          <Summary>Tervezett veg idopont</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="VEGREHAJTAS_KEZDET_IDO" Member="VEGREHAJTASKEZDETIDO" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="ee4fea58-2b32-4061-80e8-e588cdc94093">
+        <Documentation>
+          <Summary>Vegrehajtas kezdet idopont</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="VEGREHAJTAS_VEG_IDO" Member="VEGREHAJTASVEGIDO" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="12ad3c58-84df-4c51-a100-2b586f74ab3c">
+        <Documentation>
+          <Summary>Vegrehajtas veg idopont</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="FELVETEL_IDO" Member="FELVETELIDO" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="0" ed:ValidateRequired="true" ed:Guid="604ec186-8f0c-43a5-9fa7-58e4bb6106f8">
+        <Documentation>
+          <Summary>Felvetel idoponjta</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="KIADAS_IDO" Member="KIADASIDO" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="a8d96b63-6123-43f6-b1a6-f10fca1a2750">
+        <Documentation>
+          <Summary>Az az idopont, amikor kiadott lett a statusz.</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="LEZARAS_IDO" Member="LEZARASIDO" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="e6fc6354-b9e0-45a9-bc05-069d70e44090">
+        <Documentation>
+          <Summary>Elemi munka muszaki es penzugyi zarasanak idopontja</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="REGIO" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="75961608-a8f7-44d6-b4a9-184066621589">
+        <Documentation>
+          <Summary>Aktiv regio</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="KOMUNKSTAT_AZONOSITO" Member="KOMUNKSTATAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="6533bd34-8b6d-4c43-8101-7de57e6bb93f">
+        <Documentation>
+          <Summary>Munka statusz</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="KANORMTEV_AZONOSITO" Member="KANORMTEVAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="0cb5b7bf-dada-47b4-a2f7-13697836990c">
+        <Documentation>
+          <Summary>Norma tevekenyseg</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="MEGJEGYZES" Type="System.String" DbType="VARCHAR2(1000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="1000" ed:ValidateMaxLength="1000" ed:ValidateRequired="false" ed:Guid="1f1e6967-b5bf-4d94-94bc-a4ed3d30e7b8">
+        <Documentation>
+          <Summary>Megjegyzes</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="GEOKOD_X" Member="GEOKODX" Type="System.Double" DbType="NUMBER(10,3) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" Scale="3" ed:ValidateRequired="false" ed:Guid="f89e0d59-b7e3-4feb-b788-71b411a56a96">
+        <Documentation>
+          <Summary>Munka geokodja (EOV x koordinata)</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="GEOKOD_Y" Member="GEOKODY" Type="System.Double" DbType="NUMBER(10,3) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" Scale="3" ed:ValidateRequired="false" ed:Guid="2c56f9d4-eacb-4bbe-bc01-2a711d901fe6">
+        <Documentation>
+          <Summary>Munka geokodja (EOV y koordinata)</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="SAP_AZONOSITO" Member="SAPAZONOSITO" Type="System.String" DbType="VARCHAR2(64 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="64" ed:ValidateMaxLength="64" ed:ValidateRequired="false" ed:Guid="559e93bc-cc15-490d-ad79-0954930151bb">
+        <Documentation>
+          <Summary>SAP PM muvelet azonosito</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="KOZTADAT_AZONOSITO" Member="KOZTADATAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="661f6a50-a5c0-42d6-ae29-a6c04f22bbb7">
+        <Documentation>
+          <Summary>Komplex munkahoz tartozo kozterulet adatok</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="KOMPLMUNKA_AZONOSITO" Member="KOMPLMUNKAAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="395a489d-9371-4d72-be0c-1f7d27b7cdf6">
+        <Documentation>
+          <Summary>Komplex munka hivatkozas</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="SORSZAM" Type="System.Int32" DbType="NUMBER(5) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="5" ed:ValidateRequired="true" ed:Guid="8c66f542-aa5b-4196-87b9-31893974d3a5">
+        <Documentation>
+          <Summary>Display sorrend a komplex munkan belul</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="KOPRIO_AZONOSITO" Member="KOPRIOAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="05463fd3-3cfc-4b36-9975-6614ac87e212">
+        <Documentation>
+          <Summary>Munka surgosseg</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="KORZNEV_KORZET" Member="KORZNEVKORZET" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="3b06cf7f-86ca-4935-835d-fb1aa9f2f2f3" />
+      <Column Name="MIR_AZONOSITO" Member="MIRAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="2d03b033-fe69-4dfe-a1d2-90e0aa0ae4c7" />
+      <Column Name="MIR_KOMPONENS" Member="MIRKOMPONENS" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="6a5ce249-65b0-47f2-ae0b-8e14c71c0fa9" />
+      <Column Name="NORMAIDO" Type="System.Double" DbType="NUMBER(10,2) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" Scale="2" ed:ValidateRequired="false" ed:Guid="b57ad763-e148-48f6-b259-e4d0ddd88a23" />
+      <Column Name="KOV_KANORMTEV_AZONOSITO" Member="KOVKANORMTEVAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="6ada4fad-be6b-41b4-963d-2e91a1255537">
+        <Documentation>
+          <Summary>Kovetkezonek javasolt elemi munka normatevekenysege</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="KOV_KOPRIO_AZONOSITO" Member="KOVKOPRIOAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="d4390a41-31ea-4d02-bf1e-d3be8c898c89">
+        <Documentation>
+          <Summary>Kovetkezonek javasolt elemi munka surgossege</Summary>
+        </Documentation>
+      </Column>
+      <Column Name="CSOATMERO" Type="System.String" DbType="VARCHAR2(64 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="64" ed:ValidateMaxLength="64" ed:ValidateRequired="false" ed:Guid="d7ec860f-dcb3-434d-8e72-05cf57d77a32" />
+      <Column Name="CSOANYAG" Type="System.String" DbType="VARCHAR2(64 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="64" ed:ValidateMaxLength="64" ed:ValidateRequired="false" ed:Guid="f2dffe7e-e62b-4aa3-9cdf-14ed983bf367" />
+      <Column Name="KESZULTSEG" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="bcb3f75f-4538-413a-bd39-29ca418cabee" />
+      <Column Name="KOMKFORRAS_AZONOSITO" Member="KOMKFORRASAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="b147c4dc-57bb-4718-88be-9afd76490034" />
+      <Column Name="FORRAS_AZONOSITO" Member="FORRASAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="3aff42b8-b352-4c92-935c-1039200f0047" />
+      <Column Name="FORRAS_AZONOSITO_TXT" Member="FORRASAZONOSITOTXT" Type="System.String" DbType="VARCHAR2(64 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="64" ed:ValidateMaxLength="64" ed:ValidateRequired="false" ed:Guid="10a078f3-eac5-4e6f-bec6-e2c3aa3450ca" />
+      <Column Name="FELVETEL_FELH_AZON" Member="FELVETELFELHAZON" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="b47a5067-5052-4450-8bfc-2614e6e42499" />
+      <Column Name="KIADAS_FELH_AZON" Member="KIADASFELHAZON" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="214d227a-b08a-4b6a-9a23-0a210d91cc43" />
+      <Column Name="LEZARAS_FELH_AZON" Member="LEZARASFELHAZON" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="a213f2b7-33ae-43e8-8af8-e21baa2284df" />
+      <Column Name="VM_KIFOGAS_AZONOSITO" Member="VMKIFOGASAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="39172844-ccef-4e6a-a2de-9537c266dfd4" />
+      <Column Name="INTEZKEDES_AZON" Member="INTEZKEDESAZON" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="32d23529-64ec-48bb-a277-69014c300362" />
+    </Type>
+  </Table>
+  <Table Name="MIRTUSZ.V_ELEMI_MUNKA_IN_M_LIST" Member="VELEMIMUNKAINMLISTs">
+    <Type Name="VELEMIMUNKAINMLIST" ed:Guid="48d306ac-2465-4a3c-bb66-90d79b556434">
+      <Column Name="AZONOSITO" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Precision="10" ed:ValidateRequired="true" ed:Guid="c9e4bce1-87ab-4cca-8ac3-a3619e67cad5" />
+      <Column Name="MAIN" Type="System.String" DbType="VARCHAR2(64 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="64" ed:ValidateMaxLength="64" ed:ValidateRequired="true" ed:Guid="245b8edc-f97c-4b95-8f00-2c22bed76906" />
+      <Column Name="KESZULTSEG" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="f33b9202-4a04-48ca-a725-ed65c76538d6" />
+      <Column Name="PRIORITAS" Type="System.String" DbType="VARCHAR2(64 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="64" ed:ValidateMaxLength="64" ed:ValidateRequired="false" ed:Guid="5e115f64-8927-42ad-8c01-cd7e2c28ad95" />
+      <Column Name="IDO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="0" ed:ValidateRequired="false" ed:Guid="693825ad-c4f1-4062-b57f-cd8b168022c2" />
+      <Column Name="BEJSZ" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="0" ed:ValidateRequired="false" ed:Guid="93390bbd-4bf5-4b53-8b2c-0793e1fb1152" />
+      <Column Name="MUNKASZAM" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="0" ed:ValidateRequired="false" ed:Guid="1f3dec33-5879-471c-9008-fe2c59b9392d" />
+      <Column Name="CIM" Type="System.String" DbType="VARCHAR2(114 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="114" ed:ValidateMaxLength="114" ed:ValidateRequired="false" ed:Guid="23ff30e0-36cc-4d46-a943-784f9d11fcfa" />
+      <Column Name="START_IDO" Member="STARTIDO" Type="System.String" DbType="VARCHAR2(16 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="16" ed:ValidateMaxLength="16" ed:ValidateRequired="false" ed:Guid="c95c95c7-f292-4e0d-8731-78d995b127a4" />
+      <Column Name="KOMPLEX_MUNKA_AZONOSITO" Member="KOMPLEXMUNKAAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="e69e2533-56e8-458d-b3d2-fa198a7b9df8" />
+      <Column Name="SORSZAM" Type="System.Int32" DbType="NUMBER(5) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="5" ed:ValidateRequired="true" ed:Guid="ee54cc37-8800-437a-935c-e501aa276fec" />
+      <Column Name="STATUSZ" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="a5de6eec-9088-4366-a7f0-d0de4a3abd0a" />
+      <Column Name="TERVEZETT_KEZDET_IDO" Member="TERVEZETTKEZDETIDO" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="006df8f4-c523-4a16-a274-11ba7d2ac808" />
+      <Column Name="TERVEZETT_VEG_IDO" Member="TERVEZETTVEGIDO" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="e4dc98bc-262b-4466-b5aa-1c596d998aa0" />
+      <Column Name="VEGREHAJTAS_KEZDET_IDO" Member="VEGREHAJTASKEZDETIDO" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="eef26d28-2903-4c7d-935b-c70f1d8cfee1" />
+      <Column Name="VEGREHAJTAS_VEG_IDO" Member="VEGREHAJTASVEGIDO" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="ebd44dd7-6e8e-4a9b-91a7-208a01dd3d16" />
+      <Column Name="KANORMTEV_AZONOSITO" Member="KANORMTEVAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="5803fd60-c933-46c6-95e9-351a8e0b8def" />
+      <Column Name="KOV_KOPRIO_AZONOSITO" Member="KOVKOPRIOAZONOSITO" Type="System.Int64" DbType="NUMBER(10) NULL" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="0c2b0d01-3560-46c1-8be2-b465232f7837" />
+      <Column Name="KOV_KANORMTEV_MEGNEVEZES" Member="KOVKANORMTEVMEGNEVEZES" Type="System.String" DbType="VARCHAR2(64 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="64" ed:ValidateMaxLength="64" ed:ValidateRequired="false" ed:Guid="b3b06d74-e4d4-413b-9383-cb9a07fc5544" />
+      <Column Name="KOV_KOPRIO_MEGNEVEZES" Member="KOVKOPRIOMEGNEVEZES" Type="System.String" DbType="VARCHAR2(64 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="64" ed:ValidateMaxLength="64" ed:ValidateRequired="false" ed:Guid="11ab5152-a9e5-4e80-af32-cd17662a0368" />
+      <Column Name="MUNKAKEZDES" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="9b6e0079-77fd-4b2f-823a-9ae22b8fdf96" />
+      <Column Name="MUNKABEFEJEZES" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="1914a46c-4a4a-407c-afd3-fa043dd31baf" />
+      <Column Name="OSYSDATE" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="6f3795d4-af3e-4502-bf80-b80eb10f5023" />
+      <Column Name="MAIN_ICON" Member="MAINICON" Type="System.String" DbType="VARCHAR2(60 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="60" ed:ValidateMaxLength="60" ed:ValidateRequired="false" ed:Guid="df8c6330-62f7-4633-8262-ad2c74436e96" />
+      <Column Name="ICON0" Type="System.String" DbType="VARCHAR2(17 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="17" ed:ValidateMaxLength="17" ed:ValidateRequired="false" ed:Guid="cee04129-4e80-4f90-b4e1-05a935274147" />
+      <Column Name="ICON1" Type="System.String" DbType="CHAR(14) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="14" ed:ValidateMaxLength="14" ed:ValidateRequired="false" ed:Guid="75cf606e-8599-4d26-b14f-293e4c690748" />
+    </Type>
+  </Table>
+</Database>
