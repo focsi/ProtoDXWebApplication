@@ -11,7 +11,12 @@ namespace ProtoDXWebApplication.Pages.Main.ElemiMunkak
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ASPxGridView1.DataBind();
+            //ASPxGridView1.DataBind();
+        }
+
+        protected void LinqServerModeDataSource1_Selecting(object sender, DevExpress.Data.Linq.LinqServerModeDataSourceSelectEventArgs e)
+        {
+            e.KeyExpression = "AZONOSITO";
         }
     }
 }

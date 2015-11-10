@@ -14,13 +14,15 @@
     <div>
     
         <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="LinqServerModeDataSource1" OnDataBinding="ASPxGridView1_DataBinding">
-            <Settings ShowFilterRow="True" />
+            <SettingsPager PageSize="20">
+            </SettingsPager>
+            <Settings ShowFilterRow="True" ShowFilterRowMenu="True" ShowFilterRowMenuLikeItem="True" ShowGroupPanel="True" />
             <Columns>
-                <dx:GridViewCommandColumn ShowClearFilterButton="True" VisibleIndex="0">
+                <dx:GridViewCommandColumn ShowClearFilterButton="True" ShowEditButton="True" VisibleIndex="0">
                 </dx:GridViewCommandColumn>
-                <dx:GridViewDataTextColumn FieldName="AZONOSITO" VisibleIndex="1">
+                <dx:GridViewDataTextColumn FieldName="AZONOSITO" VisibleIndex="1" Caption="Azonosító">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="MAIN" VisibleIndex="2">
+                <dx:GridViewDataTextColumn FieldName="MAIN" VisibleIndex="2" Caption="Normatev">
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="KESZULTSEG" VisibleIndex="3">
                 </dx:GridViewDataTextColumn>
@@ -74,7 +76,7 @@
         </dx:ASPxGridView>
     
     </div>
-        <dx:LinqServerModeDataSource ID="LinqServerModeDataSource1" runat="server" ContextTypeName="MIRTUSZContext.MIRTUSZDataContext" TableName="VELEMIMUNKAINMLISTs" />
+        <dx:LinqServerModeDataSource ID="LinqServerModeDataSource1" runat="server" ContextTypeName="MIRTUSZContext.MIRTUSZDataContext" OnSelecting="LinqServerModeDataSource1_Selecting" TableName="VELEMIMUNKAINMLISTs" />
     </form>
 </body>
 </html>

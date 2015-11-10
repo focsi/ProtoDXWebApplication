@@ -10,11 +10,11 @@ namespace ProtoDXWebApplication.Pages.Main.ElemiMunkak
     {
         protected void ASPxGridView1_DataBinding(object sender, EventArgs e)
         {
-            var control = sender as ASPxGridView;
-            if (control != null)
-            {
-                control.DataSource = GetData();
-            }
+            //var control = sender as ASPxGridView;
+            //if (control != null)
+            //{
+            //    control.DataSource = GetData();
+            //}
         }
 
         private object GetData()
